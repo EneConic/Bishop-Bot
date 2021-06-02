@@ -8,7 +8,7 @@ class Discuss(commands.Cog):
         self.client = client
 
     @commands.command(help="I shall answer your questions.")
-    async def question(self, cx, *, message):
+    async def question(self, ctx, *, message):
         Answers = [
             "Yes, ",
             "No, ",
@@ -24,7 +24,7 @@ class Discuss(commands.Cog):
             "As I have said before, no, "
             "As I have said before, yes, "
         ]
-        Answers_Select = Answers[random.randint(0,12)]
+        Answers_Select = Answers[random.randint(0,11)]
         await ctx.send(Answers_Select + f'{ctx.message.author.mention}')
 
 def setup(client):
