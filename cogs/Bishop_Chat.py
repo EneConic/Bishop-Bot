@@ -15,13 +15,13 @@ class Discuss(commands.Cog):
             "Quite, ",
             "Possibly, ",
             "Of course, ",
-            "Of course not, "
-            "Ah. I see. "
+            "Of course not, ",
+            "Ah. I see. ",
             "That would be most unfortunate should it go awry, ",
             "I would recommend it, ",
             "I wouldn't recommend it, ",
-            "I feel like I've talked about this before... "
-            "As I have said before, no, "
+            "I feel like I've talked about this before... ",
+            "As I have said before, no, ",
             "As I have said before, yes, "
         ]
         Answers_Select = Answers[random.randint(0,11)]
