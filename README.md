@@ -1,5 +1,5 @@
 # Bishop-Bot
-A helper bot for the "Fire Emblme Three Houses: A New Dawn" server
+A helper bot for the "Fire Emblem Three Houses: A New Dawn" server
 
 Welcome to Garreg Mach Monastery! I shall be your assistant and guide during your time here!
 
