@@ -7,9 +7,7 @@ client = commands.Bot(command_prefix='%')
 
 @client.event
 async def on_ready():
-    with open("token.txt", "r") as CID:
-	    Channel_Read = CID.read()
-	channel = client.get_channel(Channel_Read)
+	channel = client.get_channel(849758362186153984)
 	
 	await channel.send("Hello there!\n\nWhat can I help you with today?")
 
