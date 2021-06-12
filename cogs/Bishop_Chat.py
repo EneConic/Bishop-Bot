@@ -45,7 +45,6 @@ class Discuss(commands.Cog):
             'Annette',
             'Ashe'
         ]
-        Member_Select = Member_List[random.randint(0,13)]
 
         Activity_List_Solo = [
             '{} is going for a walk.',
@@ -54,9 +53,32 @@ class Discuss(commands.Cog):
             '{} is going to go to town.',
             'Has anyone seen {} lately? They haven\'t been reporting in today.'
         ]
-        Activity_Select_Solo = Activity_List_Solo[random.randint(0,4)]
 
-        await ctx.send(Activity_Select_Solo.format(Member_Select))
+        Activity_List_Double = [
+            "I heard {} and {} are dating.",
+            "{} saw {} buying flowers the other day. The fancy ones too.",
+            "{} and {} have been sneaking off a lot recently.",
+            "{} does not like {}.",
+            "I saw {} buying a present for {} today. It was cute."
+        ]
+
+        Gossip_Type_List = ['single', 'double']
+        Gossip_Type_Select = Gossip_Type_List[random.randint(0,1)]
+
+        if Gossip_Type_Select == Gossip_Type_List[0]:
+            Member_Select = Member_List[random.randint(0,13)]
+
+            Activity_Select_Solo = Activity_List_Solo[random.randint(0,4)]
+
+            await ctx.send(Activity_Select_Solo.format(Member_Select))
+
+        if Gossip_Type_Select == Gossip_Type_List[1]:
+            Member_Select_1 = Member_List[random.randint(0,13)]
+            Member_Select_2 = Member_List[random.randint(0, 13)]
+
+            Activity_Select_Double = Activity_List_Double[random.randint(0,4)]
+
+            await ctx.send(Activity_Select_Double.format(Member_Select_1, Member_Select_2))
 
 def setup(client):
     client.add_cog(Discuss(client))
